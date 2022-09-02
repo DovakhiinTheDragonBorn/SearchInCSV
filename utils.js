@@ -20,7 +20,8 @@ export const findInCSV = async (file, columnIndex, searchKey) => {
           const itemString = `${Object.values(item).join(",")};\n`;
           results += itemString;
         });
-        console.log(results);
+        if (results) console.log(results);
+        else console.log("Data not found");
       });
   } catch (error) {
     console.log(`error caught: ${error}`);
